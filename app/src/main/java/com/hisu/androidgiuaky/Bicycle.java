@@ -10,13 +10,21 @@ public class Bicycle implements Serializable {
     private double discount;
     private double discountPercentage;
 
-    public Bicycle(int imageUrl, String name, String desc, double price, double discount, double discountPercentage) {
+    /*
+        0: Trending
+        1: popular
+        2: recommend
+     */
+    private int type;
+
+    public Bicycle(int imageUrl, String name, String desc, double price, double discount, double discountPercentage, int type) {
         this.imageUrl = imageUrl;
         this.name = name;
         this.desc = desc;
         this.price = price;
         this.discount = discount;
         this.discountPercentage = discountPercentage;
+        this.type = type;
     }
 
     public int getImageUrl() {
@@ -33,6 +41,14 @@ public class Bicycle implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
     }
 
     public String getDesc() {

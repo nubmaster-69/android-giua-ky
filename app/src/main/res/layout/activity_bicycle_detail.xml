@@ -6,4 +6,104 @@
     android:layout_height="match_parent"
     tools:context=".BicycleDetailActivity">
 
+    <ImageView
+        android:id="@+id/bike_detail_img"
+        android:layout_width="380dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bifive_removebg_preview" />
+
+    <TextView
+        android:id="@+id/bike_detail_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Red Bull One"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/bike_detail_img"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/bike_detail_img"
+        app:layout_constraintTop_toBottomOf="@+id/bike_detail_img" />
+
+    <TextView
+        android:id="@+id/bike_detail_discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="15% OFF I 350$"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="@+id/bike_detail_name"
+        app:layout_constraintTop_toBottomOf="@+id/bike_detail_name" />
+
+    <TextView
+        android:id="@+id/bike_detail_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="449$"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/bike_detail_discount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.354"
+        app:layout_constraintStart_toEndOf="@+id/bike_detail_discount"
+        app:layout_constraintTop_toTopOf="@+id/bike_detail_discount"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Description"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/bike_detail_discount"
+        app:layout_constraintTop_toBottomOf="@+id/bike_detail_discount" />
+
+    <TextView
+        android:id="@+id/bike_detail_desc"
+        android:layout_width="380dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="16dp"
+        android:textSize="19dp"
+        android:text="It is a very important form of writing as we write almost everything in paragraphs, be it an answer, essay, story, emails, etc."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="#E94141"
+        android:text="Add to card"
+        android:textAllCaps="false"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.769"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="@+id/imageButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/bike_detail_desc"
+        app:layout_constraintTop_toBottomOf="@+id/bike_detail_desc"
+        app:srcCompat="@drawable/btn_heart" />
 </androidx.constraintlayout.widget.ConstraintLayout>

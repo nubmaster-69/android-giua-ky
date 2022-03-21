@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -40,7 +43,6 @@ public class BicycleActivity extends AppCompatActivity implements View.OnClickLi
         for (int i = 0; i < buttons.length; i++) {
             buttons[i].setOnClickListener(this);
         }
-
         prevFocusBtn = buttons[0];
     }
 
@@ -79,17 +81,17 @@ public class BicycleActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View view) {
         switch(view.getId()) {
             case R.id.btn_trending: {
-                switchButtonFocusState(btnPop,btnPop, 0);
+                switchButtonFocusState(prevFocusBtn, btnTrend, 0);
                 break;
             }
 
             case R.id.btn_popular: {
-                switchButtonFocusState(btnPop,btnPop, 1);
+                switchButtonFocusState(prevFocusBtn, btnPop, 1);
                 break;
             }
 
             case R.id.btn_recommend: {
-                switchButtonFocusState(btnPop,btnPop, 2);
+                switchButtonFocusState(prevFocusBtn, btnRecom, 2);
                 break;
             }
         }
@@ -97,12 +99,18 @@ public class BicycleActivity extends AppCompatActivity implements View.OnClickLi
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     private void switchButtonFocusState(Button prevBtn, Button clickBtn, int type) {
+
+        this.prevFocusBtn.setBackgroundColor(Color.WHITE);
+        clickBtn.setBackgroundColor(Color.rgb(250,255,255));
+
         filteredList.clear();
 
         bicycleList.forEach(bicycle -> {
             if(bicycle.getType() == type)
                 filteredList.add(bicycle);
         });
+
+        this.prevFocusBtn = clickBtn;
 
         bicycleAdapter.setAdapterData(filteredList);
     }

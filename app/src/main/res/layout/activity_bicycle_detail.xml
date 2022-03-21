@@ -46,6 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="449$"
+        android:background="@drawable/line_throught"
         android:textColor="@color/black"
         android:textSize="24dp"
         android:textStyle="bold"

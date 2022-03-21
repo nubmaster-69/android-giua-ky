@@ -1,8 +1,16 @@
 package com.hisu.androidgiuaky;
 
+import android.view.View;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 public class BicycleAdapter {
 
-    public class ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+        }
     }
 }
